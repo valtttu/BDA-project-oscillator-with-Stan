@@ -67,12 +67,12 @@ Some initial raw data analysis was performed for the data as the mean of x-coord
 # Here we plot the measured data
 p1 <- ggplot(data.frame(nuts)) + 
  geom_line(aes(x = t1, y = n1, color="M8 nut")) +
-labs(x = "Time t [s]", y = "Signal") + 
+labs(x = "Time t [s]", y = "Signal", color="") + 
   theme_classic()
 
 p2 <- ggplot(data.frame(nuts)) + 
  geom_line(aes(x = t2, y = n2, color="M10 nut")) +
-labs(x = "Time t [s]", y = "Signal") + 
+labs(x = "Time t [s]", y = "Signal", color="") + 
   theme_classic()
 
 grid.arrange(p1, p2, ncol=1)
@@ -638,7 +638,7 @@ ggplot(test_df) +
   geom_line(aes(x=test_df[,1], y=test_df[,200], color="M8 Posterior draws")) +
   geom_line(aes(x=test_df[,1], y=test_df[,250], color="M8 Posterior draws")) +
   geom_line(aes(x=test_df[,1], y=test_df[,300], color="M8 Posterior draws")) +
-  labs(x = "Time t [s]", y = "Signal") + 
+  labs(x = "Time t [s]", y = "Signal", color="") + 
    ggtitle("M8 posterior draws from the pooled model") + 
   theme_classic()
 
@@ -667,7 +667,7 @@ ggplot(test_df) +
   geom_line(aes(x=test_df[,1], y=test_df[,200], color="M10 Posterior draws")) +
   geom_line(aes(x=test_df[,1], y=test_df[,250], color="M10 Posterior draws")) +
   geom_line(aes(x=test_df[,1], y=test_df[,300], color="M10 Posterior draws")) +
-  labs(x = "Time t [s]", y = "Signal") + 
+  labs(x = "Time t [s]", y = "Signal", color="") + 
   ggtitle("M10 posterior draws from the pooled model") + 
   theme_classic()
 ```
@@ -698,7 +698,7 @@ ggplot(test_df) +
   geom_line(aes(x=test_df[,1], y=test_df[,200], color="M8 Posterior draws")) +
   geom_line(aes(x=test_df[,1], y=test_df[,250], color="M8 Posterior draws")) +
   geom_line(aes(x=test_df[,1], y=test_df[,300], color="M8 Posterior draws")) +
-  labs(x = "Time t [s]", y = "Signal") + 
+  labs(x = "Time t [s]", y = "Signal", color="") + 
   ggtitle("M8 posterior draws from the hierarchical model") + 
   theme_classic()
 
@@ -727,7 +727,7 @@ ggplot(test_df) +
   geom_line(aes(x=test_df[,1], y=test_df[,200], color="M10 Posterior draws")) +
   geom_line(aes(x=test_df[,1], y=test_df[,250], color="M10 Posterior draws")) +
   geom_line(aes(x=test_df[,1], y=test_df[,300], color="M10 Posterior draws")) +
-  labs(x = "Time t [s]", y = "Signal") + 
+  labs(x = "Time t [s]", y = "Signal", color="") + 
   ggtitle("M10 posterior draws from the hierarchical model") + 
   theme_classic()
 ```
